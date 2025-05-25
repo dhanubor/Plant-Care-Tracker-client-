@@ -37,7 +37,7 @@ const UpdatePlant = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch(`http://localhost:3000/plants/${_id}`, {
+            const response = await fetch(`https://mango-care-tracker-server.vercel.app/plants/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

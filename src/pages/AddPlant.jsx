@@ -39,7 +39,7 @@ const AddPlant = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/plants', {
+            const response = await fetch('https://mango-care-tracker-server.vercel.app/plants', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

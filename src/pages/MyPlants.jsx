@@ -25,7 +25,7 @@ const MyPlants = () => {
     try {
       setLoading(true);
       // Fetch all plants and filter by user email
-      const response = await fetch('http://localhost:3000/plants');
+      const response = await fetch('https://mango-care-tracker-server.vercel.app/plants');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -71,7 +71,7 @@ const MyPlants = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Start deleting the plant
-        fetch(`http://localhost:3000/plants/${_id}`, {
+        fetch(`https://mango-care-tracker-server.vercel.app/plants/${_id}`, {
           method: 'DELETE'
         })
         .then(res => {

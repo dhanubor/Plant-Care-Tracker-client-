@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 const Plants = () => {
   const plantData = useLoaderData();
+  console.log(plantData)
   const [plants, setPlants] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('default');
@@ -91,7 +92,7 @@ const Plants = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Start deleting the plant
-        fetch(`http://localhost:3000/plants/${_id}`, {
+        fetch(`https://mango-care-tracker-server.vercel.app/plants/${_id}`, {
           method: 'DELETE'
         })
         .then(res => {

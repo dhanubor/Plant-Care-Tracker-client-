@@ -12,7 +12,7 @@ const PlantGrid = () => {
     const fetchLatestPlants = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/plants?limit=6');
+        const response = await fetch('https://mango-care-tracker-server.vercel.app/plants?limit=6');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
