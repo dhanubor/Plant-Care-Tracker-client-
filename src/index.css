@@ -1,2 +1,9 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* You can change 'dark' to any Daisy UI theme name */
+/* Available themes: dark, cupcake, forest, black, luxury, night, synthwave, etc. */

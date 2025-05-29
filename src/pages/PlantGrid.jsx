@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaEye, FaLeaf, FaTint, FaHeart, FaSeedling } from 'react-icons/fa';
 import { Link } from 'react-router';
+
 import Swal from 'sweetalert2';
+import Lodding from '../components/Lodding';
 
 const PlantGrid = () => {
   const [plants, setPlants] = useState([]);
@@ -17,9 +19,13 @@ const PlantGrid = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        setPlants(data);
+        
+        // Additional safety check to ensure maximum 6 plants
+        const limitedPlants = Array.isArray(data) ? data.slice(0, 6) : [];
+        setPlants(limitedPlants);
       } catch (error) {
         console.error('Error fetching plants:', error);
+        
         Swal.fire({
           title: 'Error!',
           text: 'Failed to load plants. Please try again later.',
@@ -79,9 +85,7 @@ const PlantGrid = () => {
       </div>
 
       {loading ? (
-        <div className="flex justify-center items-center py-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
-        </div>
+        <Lodding/>
       ) : plants.length === 0 ? (
         <div className="text-center py-12 bg-white rounded-lg shadow">
           <div className="text-6xl mb-4">🌱</div>

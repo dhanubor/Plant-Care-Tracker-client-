@@ -5,6 +5,7 @@ import Banner from '../components/Banner'
 import PlantGrid from './PlantGrid'
 import PlantCareMistakes from './PlantCareMistakes'
 import BeginnerPlants from './BeginnerPlants'
+import Time from './Time'
 // import plantAnimtion form '../../public/Animation.json'
 
 const Home = () => {
@@ -15,9 +16,11 @@ const Home = () => {
 
      <Banner/>
       {/* Testimonials Section */}
+      
       <PlantGrid/>
       <PlantCareMistakes/>
       <BeginnerPlants/>
+      <Time/>
      
       
      
