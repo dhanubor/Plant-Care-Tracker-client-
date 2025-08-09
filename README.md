@@ -1,12 +1,36 @@
-# React + Vite
+# 🌱 Plant Care Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web application to help plant lovers monitor, manage, and nurture their plants with ease. Users can add plant details, set care schedules, track growth, and receive timely reminders to keep plants healthy.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+https://mangocare-tracker.web.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **React** – Frontend UI library
+- **Tailwind CSS** – Styling framework
+- **Firebase** – Authentication & Firestore database
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
+![Home Page](./images/home.png)
+![Add Plant](./images/all-homr.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## ✨ Features
+- **User Authentication** – Secure login & signup with Firebase Auth.
+- **Add Plants** – Store plant details including name, type, and care info.
+- **Watering & Care Schedules** – Set reminders for watering, fertilizing, etc.
+- **My Plants Dashboard** – View and manage all your plants in one place.
+- **Dark/Light Mode** – Toggle between themes for better user experience.
+- **Responsive Design** – Works seamlessly on mobile, tablet, and desktop.
+
+## 📦 Dependencies
+- `react` ^18.x
+- `tailwindcss` ^3.x
+- `firebase` ^9.x
+- `date-fns` ^3.x
+- `lottie-react` ^2.x
+
+## 💻 Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dhanubor/Plant-Care-Tracker-client-.git
